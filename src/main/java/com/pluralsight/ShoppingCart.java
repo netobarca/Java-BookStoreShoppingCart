@@ -22,7 +22,7 @@ public class ShoppingCart {
   cartItems.add(cartItem);
  }
  
- public void deleteCarItem(int index) {
+ public void deleteCartItem(int index) {
 	 try {
 		 cartItems.remove(index);
 	} catch (IndexOutOfBoundsException e) {
