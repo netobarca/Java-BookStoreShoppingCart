@@ -35,10 +35,10 @@
 		                    <td> ${ cartItem.getTitle() } </td>
 		                    <td> ${ cartItem.getAuthor() } </td>
 		                    <td> <fmt:formatNumber value = "${ cartItem.getPrice() }" type = "currency"/>  </td>
-		                    <td><input type="number" name="quantity" min="1" max="50"></input> ${ cartItem.getQuantity() }</td>
+		                    <td><input type="number" name="quantity" min="1" max="50" value= "${ cartItem.getQuantity() }"></input></td>
 		                    <td> <fmt:formatNumber value = "${ cartItem.getTotalCost() }" type = "currency"/> </td>
 		                    <td><input type="submit" value="Update" /> 
-		                    	<input type="submit" action="/cart/delete" value="Delete" /></td>
+		                    	<input type="submit" formaction="/cart/delete" value="Delete" /></td>
 		                    	</form>
               		</tr>
           		</c:forEach>
