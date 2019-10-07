@@ -62,8 +62,8 @@ public class CartController extends HttpServlet {
 	private void deleteFromCart(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		int index = Integer.parseInt(request.getParameter("index"));
-		ShoppingCart shoppingCart = (ShoppingCart)session.getAttribute("cart");
-		shoppingCart.deleteCarItem(index);
+		ShoppingCart cart = (ShoppingCart)session.getAttribute("cart");
+		cart.deleteCarItem(index);
 	}
 
   protected void addToCart(HttpServletRequest request, HttpServletResponse response)
